@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0c1e2e;
-  --navy-deep: #071521;
-  --navy-soft: #16324a;
-  --ink: #15202b;
-  --muted: #5a6b7a;
-  --line: #d7e0e8;
-  --surface: #f4f7fa;
-  --surface-elevated: #ffffff;
-  --accent: #1f7a6c;
-  --accent-hover: #186357;
-  --accent-soft: #e6f3f0;
+  /* Dark preview theme: black + dark blue (local only — not committed) */
+  --navy: #0a1628;
+  --navy-deep: #02060d;
+  --navy-soft: #12233a;
+  --ink: #e8eef5;
+  --muted: #8b9bb0;
+  --line: #1e2f45;
+  --surface: #050a12;
+  --surface-elevated: #0c1524;
+  --accent: #2a9b8a;
+  --accent-hover: #34b5a1;
+  --accent-soft: #0d2a28;
   --warm: #c4a574;
   --background: var(--surface);
   --foreground: var(--ink);
@@ -38,6 +39,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -47,14 +49,14 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--accent) 28%, white);
-  color: var(--navy-deep);
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: #ffffff;
 }
 
 .hero-grid {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black 20%, transparent 75%);
 }

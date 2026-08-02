@@ -1,3 +1,4 @@
+import { Logo } from "@/components/Logo";
 import { footer, navLinks, siteConfig } from "@/content/site";
 
 export function Footer() {
@@ -5,9 +6,9 @@ export function Footer() {
     <footer className="border-t border-line bg-surface px-5 py-14 sm:px-8 lg:px-12">
       <div className="container-site grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <p className="font-[family-name:var(--font-display)] text-xl font-semibold text-ink">
-            {siteConfig.name}
-          </p>
+          <a href="#top" className="inline-flex items-center" aria-label="Kairo Pursuit home">
+            <Logo variant="light" />
+          </a>
           <p className="mt-3 max-w-sm text-base leading-relaxed text-muted">
             {footer.blurb}
           </p>

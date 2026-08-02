@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { navLinks, siteConfig } from "@/content/site";
+import { Logo } from "@/components/Logo";
+import { navLinks } from "@/content/site";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,11 +31,8 @@ export function Navbar() {
       }`}
     >
       <div className="container-site flex h-16 items-center justify-between sm:h-[4.5rem]">
-        <a
-          href="#top"
-          className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight text-white"
-        >
-          {siteConfig.name}
+        <a href="#top" className="inline-flex items-center" aria-label="Kairo Pursuit home">
+          <Logo variant="light" priority />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">

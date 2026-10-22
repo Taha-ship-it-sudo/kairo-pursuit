@@ -1,56 +1,48 @@
 import type { Metadata } from "next";
-import { Outfit, Source_Sans_3 } from "next/font/google";
-import { siteConfig } from "@/content/site";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const display = Outfit({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
-const body = Source_Sans_3({
-  variable: "--font-body",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+const title = "Kairo Pursuit | Software for the trades";
+const description =
+  "Kairo Pursuit builds tasked, which picks the best fit tech for every job, and websites for local service businesses. Based in San Luis Obispo, CA.";
 
 export const metadata: Metadata = {
-  title: {
-    default: `${siteConfig.name} | Consulting & AI Automation`,
-    template: `%s | ${siteConfig.name}`,
-  },
-  description:
-    "Kairo Pursuit helps small businesses win more work and waste less time — consulting, AI tooling, and full systems management. Based in San Luis Obispo, CA; serving California, Texas, and Colorado.",
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("https://kairopursuit.com"),
+  title,
+  description,
   openGraph: {
-    title: `${siteConfig.name} | Consulting & AI Automation`,
-    description:
-      "Consulting and AI automation for small businesses across California, Texas, and Colorado.",
-    url: siteConfig.url,
-    siteName: siteConfig.name,
+    title,
+    description,
+    url: "https://kairopursuit.com",
+    siteName: "Kairo Pursuit",
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: `${siteConfig.name} | Consulting & AI Automation`,
-    description:
-      "Consulting and AI automation for small businesses across California, Texas, and Colorado.",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  twitter: { card: "summary_large_image", title, description },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} h-full`}>
-      <body className="min-h-full flex flex-col antialiased">{children}</body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap"
+        />
+      </head>
+      <body>
+        <a className="skip-link" href="#main">
+          Skip to content
+        </a>
+        <Navbar />
+        <main id="main">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

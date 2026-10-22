@@ -1,57 +1,30 @@
-import { Logo } from "@/components/Logo";
-import { footer, navLinks, siteConfig } from "@/content/site";
+import Image from "next/image";
+import { nav, site } from "@/content/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-surface px-5 py-14 sm:px-8 lg:px-12">
-      <div className="container-site grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-2">
-          <a href="#top" className="inline-flex items-center" aria-label="Kairo Pursuit home">
-            <Logo variant="light" />
-          </a>
-          <p className="mt-3 max-w-sm text-base leading-relaxed text-muted">
-            {footer.blurb}
-          </p>
-        </div>
-
+    <footer className="footer">
+      <div className="wrap footer-inner">
         <div>
-          <p className="text-sm font-semibold tracking-wide text-ink uppercase">Links</p>
-          <ul className="mt-4 space-y-2">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="text-base text-muted transition-colors hover:text-accent"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <Image src="/brand/kairo-logo-light.png" alt="Kairo" width={305} height={103} className="footer-logo" />
+          <p>Software for trades and service businesses.</p>
         </div>
-
-        <div>
-          <p className="text-sm font-semibold tracking-wide text-ink uppercase">Contact</p>
-          <ul className="mt-4 space-y-2 text-base text-muted">
-            <li>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="transition-colors hover:text-accent"
-              >
-                {siteConfig.email}
-              </a>
-            </li>
-            <li>
-              {siteConfig.location}
-              <br />
-              Serving {siteConfig.serviceAreas}
-            </li>
-          </ul>
+        <nav aria-label="Footer" className="footer-links">
+          {nav.map((item) => (
+            <a key={item.href} href={`/${item.href}`}>
+              {item.label}
+            </a>
+          ))}
+          <a href="/privacy">Privacy</a>
+        </nav>
+        <div className="footer-contact">
+          <a href={site.phoneHref}>{site.phone}</a>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <span>{site.location}</span>
         </div>
       </div>
-
-      <div className="container-site mt-12 border-t border-line pt-6">
-        <p className="text-sm text-muted">{footer.copyright}</p>
+      <div className="wrap footer-base">
+        <p>© {new Date().getFullYear()} Kairo Pursuit LLC</p>
       </div>
     </footer>
   );

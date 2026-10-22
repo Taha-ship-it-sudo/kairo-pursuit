@@ -1,12 +1,14 @@
 # Kairo Pursuit
 
-Marketing site for **Kairo Pursuit** — consulting and AI automation for small businesses. Based in San Luis Obispo, CA; serving California, Texas, and Colorado.
+Marketing site for **Kairo Pursuit**: tasked (best fit tech for every job) and websites for local service businesses. Based in San Luis Obispo, CA; serving California, Texas, and Colorado.
+
+Live at [kairopursuit.com](https://kairopursuit.com). This repo matches the production deployment from Oct 20, 2026.
 
 ## Stack
 
 - Next.js (App Router) + TypeScript
-- Tailwind CSS
-- Framer Motion
+- Plain CSS in `src/app/globals.css` (no Tailwind)
+- Archivo from Google Fonts
 
 ## Getting started
 
@@ -19,18 +21,18 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Editing copy
 
-All site copy lives in [`src/content/site.ts`](src/content/site.ts). Update text, FAQs, contact email, and social links there.
+Most site copy (contact details, nav, process steps, FAQ) lives in [`src/content/site.ts`](src/content/site.ts). Section layouts are in `src/components/`. Case study screenshots are in `public/case-studies/`.
 
 ## Contact form
 
-Form submissions email `tahaashraf@kairopursuit.com` via [Resend](https://resend.com).
+Form submissions go to `src/app/api/contact/route.ts`, which emails `tahaashraf@kairopursuit.com` through [Resend](https://resend.com).
 
-1. Copy `.env.example` → `.env.local`
+1. Copy `.env.example` to `.env.local`
 2. Add your `RESEND_API_KEY`
 3. Restart `npm run dev`
 
-For production on Vercel, add the same env vars in the project settings.
+On Vercel, the same env vars are set for Production only, so preview deployments can't send form emails.
 
 ## Deploy
 
-Deploy to Vercel with the default Next.js settings.
+The Vercel project is **not** connected to this repo, so pushing here does not change the live site. Deploys are made directly to the `kairo-pursuit` project on Vercel. After deploying a change, commit the same change here so the repo stays in sync with production.

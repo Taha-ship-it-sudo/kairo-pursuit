@@ -1,215 +1,74 @@
-export const siteConfig = {
+export const site = {
   name: "Kairo Pursuit",
-  tagline: "Consulting & AI automation for small businesses",
   email: "tahaashraf@kairopursuit.com",
+  phone: "(214) 971-5249",
+  phoneHref: "tel:+12149715249",
   location: "San Luis Obispo, CA",
-  serviceAreas: "California, Texas, and Colorado",
-  url: "https://kairopursuit.com",
-} as const;
+  serving: "California, Texas, and Colorado",
+  demoVideoId: "9oSW_9bDUnE",
+};
 
-export const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Case Study", href: "#case-study" },
-  { label: "Contact", href: "#contact" },
-] as const;
+export const nav = [
+  { href: "#tasked", label: "tasked" },
+  { href: "#websites", label: "Websites" },
+  { href: "#work", label: "Our work" },
+  { href: "#process", label: "How it works" },
+  { href: "#faq", label: "FAQ" },
+];
 
-export const hero = {
-  brand: "Kairo Pursuit",
-  headline: "We help local businesses win more work and waste less time on it.",
-  subhead:
-    "From strategy and web presence to targeted AI tooling and full systems management — three clear tiers so you only buy what you need.",
-  primaryCta: { label: "See How We Help", href: "#services" },
-  secondaryCta: { label: "View Our Work", href: "#case-study" },
-} as const;
+export const interestOptions = [
+  { value: "tasked", label: "tasked for dispatch" },
+  { value: "website", label: "A new website" },
+  { value: "other", label: "Another manual process" },
+  { value: "not-sure", label: "Not sure yet" },
+];
 
-export const services = {
-  id: "services",
-  eyebrow: "Services",
-  title: "Three ways to work together",
-  description:
-    "Start with direction, add automation where it hurts, or hand us the whole stack. Every engagement is scoped to your bandwidth.",
-  tiers: [
-    {
-      id: "tier-1",
-      tier: "Tier 1",
-      name: "Consulting",
-      shortDescription:
-        "Direction before tools — website strategy, marketing plans, and a clear digital presence.",
-      includes: [
-        "Website & media strategy",
-        "Marketing plans and brand positioning",
-        "Digital presence audits",
-        "Prioritized recommendations you can act on",
-      ],
-      bestFor:
-        "Best for: owners who need a clear plan before investing in new tools or a rebuild.",
-    },
-    {
-      id: "tier-2",
-      tier: "Tier 2",
-      name: "AI Tooling",
-      shortDescription:
-        "Targeted automation that cuts a specific bottleneck — not a generic chatbot bolted on.",
-      includes: [
-        "RFQ / RFP response workflows",
-        "Scheduling and client follow-up",
-        "Lead intake and routing",
-        "Procurement and ops automation",
-      ],
-      bestFor:
-        "Best for: teams that already know where time is leaking and want it fixed.",
-    },
-    {
-      id: "tier-3",
-      tier: "Tier 3",
-      name: "Full Build & Management",
-      shortDescription:
-        "End-to-end ownership — we design, build, and manage your AI and automation stack ongoing.",
-      includes: [
-        "System design and implementation",
-        "Ongoing monitoring and iteration",
-        "Tooling updates as your ops change",
-        "A single point of contact for the stack",
-      ],
-      bestFor:
-        "Best for: businesses that want this handled entirely off their plate.",
-    },
-  ],
-} as const;
-
-export const howItWorks = {
-  id: "how-it-works",
-  eyebrow: "How it works",
-  title: "Simple process. Clear next steps.",
-  description:
-    "No long discovery theater. We learn enough to be useful, propose a plan, build it, and stay available after launch.",
-  steps: [
-    {
-      number: "01",
-      title: "Discovery call",
-      description:
-        "A focused conversation about how work gets done today and where time or revenue is getting stuck.",
-    },
-    {
-      number: "02",
-      title: "Plan & proposal",
-      description:
-        "A scoped recommendation — consulting only, a specific tool, or a fuller build — with timeline and cost.",
-    },
-    {
-      number: "03",
-      title: "Build",
-      description:
-        "We execute against the plan with regular check-ins so you're never guessing what's happening.",
-    },
-    {
-      number: "04",
-      title: "Launch & support",
-      description:
-        "Go live, train your team if needed, and keep support available so the system keeps earning its keep.",
-    },
-  ],
-} as const;
-
-export const caseStudy = {
-  id: "case-study",
-  eyebrow: "Case study",
-  title: "Coastal Chiropractic SLO",
-  tierLabel: "Tier 1 — Consulting & web presence",
-  writeUp:
-    "We built Coastal Chiropractic SLO's complete web presence — a clean, conversion-focused site with service breakdowns, patient reviews, and an integrated booking flow.",
-  liveUrl: "https://coastalchiroslo.com/",
-  liveLabel: "Visit coastalchiroslo.com",
-  imageSrc: "/case-studies/coastal-chiropractic-slo.png",
-  imageAlt: "Homepage of Coastal Chiropractic SLO",
-  outcomes: [
-    "Clear service breakdown reduced booking friction",
-    "Structured FAQ section cut down repetitive patient questions",
-  ],
-} as const;
-
-export const whyUs = {
-  id: "why-us",
-  eyebrow: "Why Kairo Pursuit",
-  title: "Built for owners who run the business themselves",
-  items: [
-    {
-      title: "Ops first, not code first",
-      description:
-        "Built by someone who understands small business operations — not just frameworks and demos.",
-    },
-    {
-      title: "Start small, scale up",
-      description:
-        "Tiered engagement so you can begin with consulting and add tooling when you're ready.",
-    },
-    {
-      title: "Direct communication",
-      description:
-        "No account managers, no agency bloat. You work with the person doing the work.",
-    },
-    {
-      title: "Your workflow, not a template",
-      description:
-        "AI and automation shaped around how your team actually operates — not a one-size-fits-all bot.",
-    },
-  ],
-} as const;
-
-export const faq = {
-  id: "faq",
-  eyebrow: "FAQ",
-  title: "Questions owners usually ask",
-  items: [
-    {
-      question: "How is this different from hiring an agency?",
-      answer:
-        "Smaller scope, direct contact, and a focus on outcomes you can measure — not retainers packed with unused deliverables.",
-    },
-    {
-      question: "Do I need to know anything about AI to work with you?",
-      answer:
-        "No. You need to know your business. We translate that into tools and systems that fit.",
-    },
-    {
-      question: "What does a typical engagement cost / look like?",
-      answer:
-        "Depends on the tier. Consulting engagements are scoped projects; tooling and management are quoted after discovery based on complexity.",
-    },
-    {
-      question: "Can I start with just the website and add automation later?",
-      answer:
-        "Yes. Tier 1 is designed as an entry point — many clients add Tier 2 once the foundation is solid.",
-    },
-    {
-      question: "How long does a typical project take?",
-      answer:
-        "Consulting and web projects often land in a few weeks; tooling depends on the workflow. Timelines are locked in the proposal.",
-    },
-  ],
-} as const;
-
-export const contact = {
-  id: "contact",
-  eyebrow: "Contact",
-  title: "Book a free consult",
-  description:
-    "Tell us what you're dealing with. We'll reply with a clear next step — no hard sell.",
-  locationLine: `${siteConfig.location} — serving ${siteConfig.serviceAreas}`,
-  email: siteConfig.email,
-  form: {
-    tiers: [
-      { value: "tier-1", label: "Tier 1 — Consulting" },
-      { value: "tier-2", label: "Tier 2 — AI Tooling" },
-      { value: "tier-3", label: "Tier 3 — Full Build & Management" },
-      { value: "not-sure", label: "Not sure yet" },
-    ],
-    submitLabel: "Book a Free Consult",
+export const process = [
+  {
+    title: "15 minute call",
+    body: "Tell us where the day gets stuck. We ask how the work runs today before we suggest anything.",
   },
-} as const;
+  {
+    title: "Plan and quote",
+    body: "You get a short written plan with a fixed price and a timeline. No packages to decode.",
+  },
+  {
+    title: "Build",
+    body: "We build it with you, not around you. You see progress along the way and can change course early.",
+  },
+  {
+    title: "Launch and support",
+    body: "We set it up with your team and stay reachable after launch. Same people, same phone number.",
+  },
+];
 
-export const footer = {
-  blurb: "Consulting and AI automation for small businesses.",
-  copyright: `© ${new Date().getFullYear()} Kairo Pursuit. All rights reserved.`,
-} as const;
+export const faq = [
+  {
+    q: "What is tasked?",
+    a: "tasked recommends the best fit tech for each job based on skills and experience. You enter the job, it ranks who should go and why, and your dispatcher makes the final call.",
+  },
+  {
+    q: "Do we have to stop using ServiceTitan or Housecall Pro?",
+    a: "No. tasked is not a replacement for your field service software. It handles one decision, who goes on the job, and leaves the rest of your setup alone.",
+  },
+  {
+    q: "What does it cost?",
+    a: "tasked is a monthly plan based on how many techs you run. Websites are a one time build with an optional monthly care plan. We give you a real number after a 15 minute call, because guessing helps nobody.",
+  },
+  {
+    q: "Can we try tasked before we commit?",
+    a: "Yes. Early customers get a free two week pilot on real jobs. If it doesn't help your dispatcher, you walk away.",
+  },
+  {
+    q: "How long does a website take?",
+    a: "Most sites launch in two to four weeks, depending on how many pages and locations you have and how quickly we get photos and details.",
+  },
+  {
+    q: "Do I need to know anything about AI?",
+    a: "No. You know your business. We handle the software and explain it in plain terms.",
+  },
+  {
+    q: "Who will I actually work with?",
+    a: "The people who build it. Kairo is a small team, so you talk directly to the person doing the work, not an account manager.",
+  },
+];

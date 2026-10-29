@@ -11,6 +11,7 @@ type ContactPayload = {
 const INTEREST_LABELS: Record<string, string> = {
   tasked: "tasked for dispatch",
   website: "A new website",
+  plans: "Plan set check (design partner)",
   other: "Another manual process",
   "not-sure": "Not sure yet",
 };

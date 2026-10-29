@@ -168,3 +168,31 @@ p { margin: 0 0 1em; }
 .prose-page { padding: 64px 0 96px; }
 .prose { max-width: 720px; }
 .prose .h2 { margin-bottom: 24px; }
+
+/* Plan sets */
+.plans { padding: 80px 0; border-top: 1px solid var(--line); }
+.plans-grid { display: grid; gap: 48px; }
+.eyebrow { color: var(--navy); font-weight: 700; font-size: 0.9rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 10px; }
+.plans-copy p { color: #2f3843; max-width: 60ch; }
+.partner { margin-top: 8px; padding: 22px; background: var(--signal-soft); border-left: 4px solid var(--signal); border-radius: var(--radius-sm); }
+.partner-title { font-weight: 800; color: var(--ink) !important; margin-bottom: 8px; }
+.partner .btn { margin-top: 8px; }
+.plans-sheet { align-self: start; }
+.plans-row { display: grid; gap: 2px; padding: 10px 10px 12px 14px; border-left: 3px solid var(--signal); margin: 4px 0; border-radius: var(--radius-sm); background: var(--signal-soft); }
+.plans-row.is-ok { border-left-color: var(--line); background: transparent; }
+.plans-tag { font-weight: 750; font-variant-numeric: tabular-nums; }
+.plans-note { color: var(--steel); font-size: 0.88rem; line-height: 1.4; }
+@media (min-width: 960px) { .plans { padding: 96px 0; } .plans-grid { grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: start; } }
+
+/* Story */
+.story { padding: 80px 0; }
+.story-grid { display: grid; gap: 40px; }
+.story-grid p { color: #2f3843; max-width: 58ch; }
+.story-grid .lede { color: var(--ink); font-weight: 600; }
+.founders { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; align-self: start; }
+.founder { border-top: 2px solid var(--ink); padding: 16px 0 18px; }
+.founder p { margin: 0; }
+.founder-name { color: var(--ink) !important; font-weight: 800; font-size: 1.15rem; font-variation-settings: "wdth" 108; }
+.founder-role { color: var(--navy); font-weight: 700; }
+.founder-focus { color: var(--steel) !important; font-size: 0.95rem; }
+@media (min-width: 960px) { .story-grid { grid-template-columns: 1.2fr 1fr; gap: 64px; } }

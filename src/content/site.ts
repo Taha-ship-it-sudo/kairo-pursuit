@@ -11,14 +11,16 @@ export const site = {
 export const nav = [
   { href: "#tasked", label: "tasked" },
   { href: "#websites", label: "Websites" },
+  { href: "#plans", label: "Plan sets" },
   { href: "#work", label: "Our work" },
-  { href: "#process", label: "How it works" },
+  { href: "#story", label: "About" },
   { href: "#faq", label: "FAQ" },
 ];
 
 export const interestOptions = [
   { value: "tasked", label: "tasked for dispatch" },
   { value: "website", label: "A new website" },
+  { value: "plans", label: "Plan set check (design partner)" },
   { value: "other", label: "Another manual process" },
   { value: "not-sure", label: "Not sure yet" },
 ];
@@ -58,6 +60,10 @@ export const faq = [
   {
     q: "Can we try tasked before we commit?",
     a: "Yes. Early customers get a free two week pilot on real jobs. If it doesn't help your dispatcher, you walk away.",
+  },
+  {
+    q: "Can we try the plan set tool?",
+    a: "Yes. If you bid off plan sets, send us one past job where you already know the final count. We run it free and show you what it flags. Your drawings are only used for that test and are never shared.",
   },
   {
     q: "How long does a website take?",
